@@ -1,0 +1,42 @@
+
+/* Menu transparente y fijo y encoger al hacer Scroll */
+
+selector.elementor-sticky--effects{
+ backdrop-filter: blur(2px);
+ background-color: rgb(0,0,0,0.8) !important; 
+}
+
+selector{
+  transition: background-color 1s ease !important;
+}
+
+selector.elementor-sticky--effects
+  >.elementor-container {
+  min-height: 70px;
+} 
+
+selector > .elementor-container{
+  transition: min height 1s ease !important;
+}
+
+/* Single Post Tweaks */
+.single-post .et_pb_row {
+	max-width: 1200px !important;
+}
+.dipi-post-section, .dipi-post-row {
+    max-width: 1200px;
+}
+
+/* Archive Page Content Spacing */
+.archive #main-content .container {
+    padding-top: 80px !important;
+    padding-bottom: 80px;
+}
+
+/* Redireccion 301 */
+RewriteCond % {HTTP_HOST} &nbsp;^olddomain.com&nbsp;[NC,OR] 
+RewriteCond % {HTTP_HOST}^www.olddomain.com [NC] 
+RewriteRule ^(.*)$ https: //newdomain.com/$1 [L,R=301,NC]
+
+
+
